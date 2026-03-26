@@ -6,6 +6,9 @@ files:
     file_exists_behavior: OVERWRITE
 hooks:
   BeforeInstall:
+    - location: scripts/cleanup.sh
+      timeout: 300
+      runas: root
     - location: scripts/install_dependencies.sh
       timeout: 300
       runas: root
